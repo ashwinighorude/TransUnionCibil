@@ -1,6 +1,6 @@
 package com.example.Junit.example;
 
-public class Employee {
+public class Employee  implements Comparable<Employee> { 
 
 	public int id;
 	public String firstname;
@@ -35,6 +35,11 @@ public class Employee {
 		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
+	}
+
+	@Override
+	public int compareTo(Employee employee) {
+		  return this.getId() - employee.getId();
 	}
 	
 }
